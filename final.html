@@ -3,26 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <center><title>Suporte Recebido - Agradecemos pelo Contato</title>
+    <title>Suporte Recebido - Agradecemos pelo Contato</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 20px;
+            color: #FFB6C1;
+        }
+
+        h1 {
+            color: #FFB6C1;
+            font-size: 2rem;
+            text-shadow: 0 0 10px #FFB6C1;
+        }
+
+        .message {
+            margin: 20px 0;
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .contact-info {
+            margin: 30px 0;
+            font-size: 1rem;
+            color: #777;
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #FFB6C1;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
         <header>
-           <center><h1>Seu pedido de suporte foi enviado com sucesso!</h1>
+            <h1>Seu pedido de suporte foi enviado com sucesso!</h1>
         </header>
 
-        <section class="message">
-            <center><p>Obrigado por entrar em contato! Nossa equipe de suporte está analisando sua solicitação e irá respondê-lo o mais breve possível.</p>
+        <section class="message" id="message">
+            <p>Obrigado por entrar em contato! Nossa equipe de suporte está analisando sua solicitação e irá respondê-lo o mais breve possível.</p>
         </section>
-        <section class="contact-info">
-             <center><h3>Precisa de mais ajuda?</h3>
-             <center><p>Se tiver mais dúvidas ou quiser acompanhar o status do seu pedido de suporte, entre em contato com nossa equipe de atendimento através do chat online</a> ou ligue para (12) 3456-7891.</p>
+
+        <section class="contact-info" id="contactInfo" style="display: none;">
+            <h3>Precisa de mais ajuda?</h3>
+            <p>Se tiver mais dúvidas ou quiser acompanhar o status do seu pedido de suporte, entre em contato com nossa equipe de atendimento através do chat online ou ligue para (12) 3456-7891.</p>
         </section>
 
         <footer>
-            <p>&copy;2025 trimodas.
+            <p>&copy; 2025 Trimodas.</p>
         </footer>
     </div>
+
+    <script>
+        // Simula o envio de um formulário de suporte
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById("message").style.display = 'none';
+                document.getElementById("contactInfo").style.display = 'block';
+            }, 3000);  // Aguarda 3 segundos para ocultar a mensagem inicial e mostrar a segunda seção
+        };
+    </script>
+
 </body>
 </html>

@@ -2,42 +2,145 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Suporte - trimodas</title>
-    <link rel="stylesheet" href="suporte.css"> <!-- Estilização (CSS) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Suporte - Trimodas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: #FFB6C1;
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px #FFB6C1;
+        }
+
+        main {
+            margin: 0 auto;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        h2, h3 {
+            color: #FFB6C1;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .container {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #FFB6C1;
+            box-shadow: 0 0 8px rgba(255, 182, 193, 0.2);
+            margin-bottom: 20px;
+        }
+
+        label, input, textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            min-height: 100px;
+        }
+
+        button {
+            background-color: #FFB6C1;
+            color: black;
+            font-weight: bold;
+            border: 2px solid transparent;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #FFB6C1;
+            border: 2px solid #FFB6C1;
+            box-shadow: 0 0 8px #FFB6C1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 30px;
+            background-color: #FFB6C1;
+            color: white;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-        <h1>Suporte - trimodas</h1>
+        <h1>Suporte - Trimodas</h1>
     </header>
 
     <main>
-       <div style="text-align: center;">
-        <h2>Perguntas Frequentes</h2>
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
 
-        <h3>Como faço para trocar um produto?</h3>
-        <p>Para trocar um produto, você precisa seguir as instruções...</p>
+            <h3>Como faço para trocar um produto?</h3>
+            <p>Para trocar um produto, você precisa seguir as instruções disponíveis em nossa página de trocas.</p>
 
-        <h3>Como posso rastrear meu pedido?</h3>
-        <p>Para rastrear seu pedido, acesse...</p>
-        <h2>Entre em Contato</h2> 
-        <form>
-           <center><label for="nome">Nome:</label>
-            <center><input type="text" id="nome" name="nome"><br><br>
-            <center><label for="email">Email:</label>
-            <center><input type="email" id="email" name="email"><br><br>
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem"></textarea><br><br>
-        </form>
-            
-        <h2>Informações de Contato</h2>
-        <p>E-mail: suporte@trimodas.com</p>
-        <p>Telefone: (12) 3456-7891</p>
-       </div>
-          <center><a href="final.html"><button>enviar</button></a>
+            <h3>Como posso rastrear meu pedido?</h3>
+            <p>Para rastrear seu pedido, acesse sua conta e vá até a seção de "Pedidos" para acompanhar o status de envio.</p>
+
+            <h2>Entre em Contato</h2>
+            <form action="final.html">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <h2>Informações de Contato</h2>
+            <p>E-mail: <a href="mailto:suporte@trimodas.com">suporte@trimodas.com</a></p>
+            <p>Telefone: (12) 3456-7891</p>
+        </div>
     </main>
+
     <footer>
-        <p>&copy; 2025 trimodas.</p>
+        <p>&copy; 2025 Trimodas. Todos os direitos reservados.</p>
     </footer>
 
 </body>
