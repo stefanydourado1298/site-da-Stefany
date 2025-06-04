@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Trimodas - Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: white;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 80px auto;
+            padding: 30px;
+            border: 2px solid #FFB6C1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+            background: white;
+        }
+
+        h1 {
+            text-align: center;
+            color: #FF69B4;
+            animation: subtle-glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes subtle-glow {
+            from {
+                text-shadow: 0 0 4px #FFB6C1;
+            }
+            to {
+                text-shadow: 0 0 8px #FFB6C1;
+            }
+        }
+
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #FFB6C1;
+            color: black;
+            font-weight: bold;
+            border: 2px solid transparent;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: white;
+            color: #FFB6C1;
+            border: 2px solid #FFB6C1;
+            box-shadow: 0 0 8px #FFB6C1;
+        }
+
+        img.logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 50%;
+        }
+
+        #welcome {
+            text-align: center;
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 40px 20px;
+                padding: 20px;
+            }
+
+            img.logo {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <div class="container">
+        <img src="trimodas.png" height="150" width="180">
+        <img src="arquivo.png" height="80" width="100" style="display: block; margin: 0 auto;" />
+        <h1>Loja de Roupas Trimodas</h1>
+
+        <form id="cadastroForm">
+            <label for="nome">Nome completo:</label>
+            <input type="text" id="nome" name="nome" required />
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required pattern="\\d{5}-?\\d{3}" title="Formato esperado: 00000-000" />
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required pattern="\\d{10,11}" title="Informe um telefone com DDD" />
+
+            <button type="submit">ENVIAR</button>
+        </form>
+
+        <div id="welcome"></div>
+
+        <a href="suporte.html"><button type="button">Ajuda</button></a>
+    </div>
+
+    <script>
+        const form = document.getElementById('cadastroForm');
+        const welcomeMsg = document.getElementById('welcome');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+
+            welcomeMsg.textContent = `Cadastro realizado com sucesso, ${nome}!`;
+            welcomeMsg.style.display = 'block';
+
+            // Redireciona para a loja após 2 segundos
+            setTimeout(() => {
+                window.location.href = 'precos.html';
+            }, 2000);
+        });
+    </script>
+
+</body>
+</html>
+
